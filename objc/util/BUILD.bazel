@@ -1,4 +1,4 @@
-package(default_visibility = ["//tools/build_defs:internal_pkg"])
+package(default_visibility = ["@tink_base//tools/build_defs:internal_pkg"])
 
 licenses(["notice"])
 
@@ -6,8 +6,9 @@ objc_library(
     name = "errors",
     srcs = ["TINKErrors.mm"],
     hdrs = ["TINKErrors.h"],
+    visibility = ["//visibility:public"],
     deps = [
-        "//cc/util:status",
+        "@tink_cc//util:status",
         "@com_google_absl//absl/status",
     ],
 )
@@ -16,9 +17,10 @@ objc_library(
     name = "strings",
     srcs = ["TINKStrings.mm"],
     hdrs = ["TINKStrings.h"],
+    visibility = ["//visibility:public"],
     deps = [
         ":errors",
-        "//cc/util:status",
+        "@tink_cc//util:status",
         "@com_google_absl//absl/strings",
     ],
 )
@@ -31,8 +33,8 @@ objc_library(
     deps = [
         ":errors",
         ":strings",
-        "//cc/subtle:subtle_util_boringssl",
-        "//proto:all_objc_proto",
+        "@tink_cc//subtle:subtle_util_boringssl",
+        "@tink_cc//proto:all_objc_proto",
         "@com_google_absl//absl/strings",
         "@com_google_protobuf//:objectivec",
     ],
@@ -47,8 +49,8 @@ objc_library(
         ":errors",
         ":strings",
         ":tink_cc_pb",
-        "//cc/util:status",
-        "//proto:all_objc_proto",
+        "@tink_cc//util:status",
+        "@tink_cc//proto:all_objc_proto",
         "@com_google_absl//absl/strings",
     ],
 )
@@ -56,6 +58,6 @@ objc_library(
 cc_library(
     name = "tink_cc_pb",
     deps = [
-        "//proto:tink_cc_proto",
+        "@tink_cc//proto:tink_cc_proto",
     ],
 )

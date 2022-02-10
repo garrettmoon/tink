@@ -46,6 +46,7 @@ cc_library(
     srcs = ["mac_factory.cc"],
     hdrs = ["mac_factory.h"],
     include_prefix = "tink/mac",
+    visibility = ["//visibility:public"],
     deps = [
         ":mac_wrapper",
         "//:key_manager",

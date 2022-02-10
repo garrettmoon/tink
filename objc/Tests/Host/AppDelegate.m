@@ -16,7 +16,7 @@
  **************************************************************************
  */
 
-#import "objc/Tests/Host/AppDelegate.h"
+#import "Tests/Host/AppDelegate.h"
 
 @interface AppDelegate ()
 

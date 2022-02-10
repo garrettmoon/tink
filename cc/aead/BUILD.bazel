@@ -83,6 +83,7 @@ cc_library(
     srcs = ["aead_factory.cc"],
     hdrs = ["aead_factory.h"],
     include_prefix = "tink/aead",
+    visibility = ["//visibility:public"],
     deps = [
         ":aead_wrapper",
         "//:aead",

@@ -26,6 +26,7 @@ cc_library(
     srcs = ["public_key_verify_factory.cc"],
     hdrs = ["public_key_verify_factory.h"],
     include_prefix = "tink/signature",
+    visibility = ["//visibility:public"],
     deps = [
         ":public_key_verify_wrapper",
         "//:key_manager",
@@ -61,6 +62,7 @@ cc_library(
     srcs = ["public_key_sign_factory.cc"],
     hdrs = ["public_key_sign_factory.h"],
     include_prefix = "tink/signature",
+    visibility = ["//visibility:public"],
     deps = [
         ":public_key_sign_wrapper",
         "//:key_manager",

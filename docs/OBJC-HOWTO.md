@@ -92,10 +92,10 @@ installed:
 2.  Build the library and generate a static iOS framework.
 
     ```sh
-    cd tink
-    export XCODE_VERSION=9.2
-    export IOS_SDK=11.2
-    bazel build -c opt --ios_multi_cpus=i386,x86_64,armv7,arm64 --xcode_version="${XCODE_VERSION}" --ios_sdk_version="${IOS_SDK}" //objc:Tink_framework
+    cd tink/objc
+    export XCODE_VERSION=13.2.1
+    export IOS_SDK=15.2
+    bazel build -c opt --ios_multi_cpus=i386,x86_64,armv7,arm64 --apple_bitcode=embedded --xcode_version="${XCODE_VERSION}" --ios_sdk_version="${IOS_SDK}" //objc:Tink_framework
     ```
 
     Adjust the following options according to your build environment:

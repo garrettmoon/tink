@@ -69,6 +69,7 @@ cc_library(
     srcs = ["deterministic_aead_factory.cc"],
     hdrs = ["deterministic_aead_factory.h"],
     include_prefix = "tink/daead",
+    visibility = ["//visibility:public"],
     deps = [
         ":deterministic_aead_wrapper",
         "//:deterministic_aead",

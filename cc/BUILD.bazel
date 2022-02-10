@@ -400,6 +400,7 @@ cc_library(
     srcs = ["core/config.cc"],
     hdrs = ["config.h"],
     include_prefix = "tink",
+    visibility = ["//visibility:public"],
     deps = [
         ":catalogue",
         ":key_manager",

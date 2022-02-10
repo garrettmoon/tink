@@ -61,6 +61,7 @@ cc_library(
     name = "errors",
     hdrs = ["errors.h"],
     include_prefix = "tink/util",
+    visibility = ["//visibility:public"],
     deps = [
         ":status",
         "@com_google_absl//absl/strings:str_format",
